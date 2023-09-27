@@ -125,7 +125,7 @@ Text-Attributes.
 .pharse::before {
 
     content: "";
-    animation: text-writing 10s linear forwards, blink-caret 1s linear infinite;
+    animation: text-writing 5s linear forwards, blink-caret 1s linear infinite;
 
 }
 
