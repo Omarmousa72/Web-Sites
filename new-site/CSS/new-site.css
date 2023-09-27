@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* 
+    Container attributes
+*/
+.container {
+
+    background: linear-gradient(180deg, #000, #05123f, #061e50);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    position: fixed;
+    position: relative;
+
+}
+
+/* 
+    Start header:
+*/
+nav {
+
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    justify-content: flex-end;
+    align-items: center;
+
+
+
+
+}
+
+.moon-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    left: 50px;
+    opacity: 0;
+    animation: logo 1s linear forwards;
+    animation-delay: 2.5s;
+    cursor: pointer;
+
+
+}
+
+
+
+ul {
+
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+    font-size: 25px;
+    padding: 0 10px;
+
+}
+
+nav .links #home {
+    opacity: 0;
+    animation: word-animation 1s linear forwards;
+    animation-delay: 3s;
+    transition: 0.3s;
+
+}
+
+nav .links #about-us {
+    opacity: 0;
+    animation: word-animation 1s linear forwards;
+    animation-delay: 3.5s;
+
+}
+
+nav .links #projects {
+    opacity: 0;
+    animation: word-animation 1s linear forwards;
+    animation-delay: 4s;
+
+}
+
+nav .links #contact-us {
+    opacity: 0;
+    animation: word-animation 1s linear forwards;
+    animation-delay: 4.5s;
+
+}
+
+/* 
+Text-Attributes.
+*/
+
+.pharse {
+
+    height: fit-content;
+    overflow: hidden;
+    width: 100;
+    white-space: nowrap;
+    height: fit-content;
+    position: absolute;
+    border-right: .15em solid transparent;
+
+    left: 35%;
+    top: 25%;
+    animation-delay: 5s;
+
+}
+
+.pharse::before {
+
+    content: "";
+    animation: text-writing 10s linear forwards, blink-caret 1s linear infinite;
+
+}
+
+
+/* 
+Moon contaniner,
+moon
+ */
+.co-moon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+
+.moon {
+
+
+    width: 900px;
+    height: 880px;
+    border-radius: 50%;
+    background-image: url(../Images/moon-png-44660.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 50px 5px rgb(255, 255, 255, 0.7),
+        0 0 50px 25px rgb(255, 255, 255, 0.5),
+        0 0 50px 40px rgb(255, 255, 255, 0.2),
+        0 0 200px 50px rgb(255, 255, 255, 1);
+    position: relative;
+    top: 120%;
+    animation: rotate 100s linear infinite, up 2s linear forwards;
+}
+
+
+/* 
+    Moon animation
+*/
+@keyframes rotate {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* 
+    Moon moving up
+*/
+@keyframes up {
+
+    100% {
+
+        top: 30%;
+
+    }
+
+}
+
+@keyframes word-animation {
+
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes logo {
+    100% {
+
+        opacity: 100%;
+
+    }
+}
+
+@keyframes text-writing {
+
+
+    0% {
+        content: "";
+    }
+
+    2% {
+
+        content: "W";
+
+    }
+
+    4% {
+
+        content: "We";
+
+    }
+
+    6% {
+        content: "Wel";
+    }
+
+    8% {
+        content: "Welc";
+    }
+
+    10% {
+
+        content: "Welco";
+
+    }
+
+    12% {
+
+        content: "Welcom";
+
+    }
+
+    14% {
+
+        content: "Welcome";
+
+    }
+
+    16% {
+
+        content: "Welcome ";
+
+    }
+
+    18% {
+
+        content: "Welcome t";
+
+    }
+
+    20% {
+
+        content: "Welcome to";
+
+    }
+
+    22% {
+
+        content: "Welcome to ";
+
+    }
+
+
+
+}
+
+@keyframes blink-caret {
+
+    0%,
+    50%,
+    75% {
+        border-color: transparent
+    }
+
+    100% {
+        border-color: #fff
+    }
+}
