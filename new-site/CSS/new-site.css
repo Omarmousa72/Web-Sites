@@ -106,26 +106,39 @@ nav .links #contact-us {
 Text-Attributes.
 */
 
-.pharse {
+.pharse-2 {
 
     height: fit-content;
+    width: fit-content;
     overflow: hidden;
-    width: 100;
     white-space: nowrap;
     height: fit-content;
-    position: absolute;
-    border-right: .15em solid transparent;
 
-    left: 35%;
-    top: 25%;
-    animation-delay: 5s;
+
 
 }
 
-.pharse::before {
+.pharse-2::before {
 
     content: "";
     animation: text-writing 5s linear forwards, blink-caret 1s linear infinite;
+    border-right: 1px solid transparent;
+    animation-delay: 6s;
+
+}
+
+.pharse-1 {
+
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: text-typing 3s linear forwards;
+    width: 0;
+    overflow: hidden;
+    text-wrap: nowrap;
+    border-right: 1px solid transparent;
+    animation-delay: 5s;
 
 }
 
@@ -219,68 +232,196 @@ moon
 
     2% {
 
-        content: "W";
+        content: "M";
 
     }
 
     4% {
 
-        content: "We";
+        content: "Mo";
 
     }
 
     6% {
-        content: "Wel";
+        content: "Moo";
     }
 
     8% {
-        content: "Welc";
+        content: "Moon";
     }
 
     10% {
 
-        content: "Welco";
+        content: "Moon ";
 
     }
 
     12% {
 
-        content: "Welcom";
+        content: "Moon L";
 
     }
 
     14% {
 
-        content: "Welcome";
+        content: "Moon Li";
 
     }
 
     16% {
 
-        content: "Welcome ";
+        content: "Moon Lig";
 
     }
 
     18% {
 
-        content: "Welcome t";
+        content: "Moon Ligh";
 
     }
 
     20% {
 
-        content: "Welcome to";
-
-    }
-
-    22% {
-
-        content: "Welcome to ";
+        content: "Moon Light";
 
     }
 
 
+    60% {
 
+        content: "Moon Light";
+
+    }
+
+    62% {
+
+        content: "Moon Ligh";
+
+    }
+
+    64% {
+
+        content: "Moon Lig";
+
+    }
+
+    66% {
+
+        content: "Moon Li";
+
+    }
+
+    68% {
+
+        content: "Moon L";
+
+    }
+
+    70% {
+
+        content: "Moon ";
+
+    }
+
+    72% {
+
+        content: "Moon";
+
+    }
+
+    74% {
+
+        content: "Moo";
+
+    }
+
+    76% {
+
+        content: "Mo";
+
+    }
+
+    78% {
+
+        content: "M";
+
+    }
+
+    80% {
+
+        content: "";
+
+    }
+
+    82% {
+
+        content: "S";
+
+    }
+
+    84% {
+
+        content: "Sp";
+
+    }
+
+    86% {
+
+        content: "Spa";
+
+    }
+
+    88% {
+
+        content: "Spac";
+
+    }
+
+    90% {
+
+        content: "Space";
+
+    }
+
+    92% {
+
+        content: "Space ";
+
+    }
+
+    94% {
+
+        content: "Space S";
+
+    }
+
+    96% {
+
+        content: "Space Si";
+
+    }
+
+    98% {
+
+        content: "Space Sit";
+
+    }
+
+    100% {
+
+        content: "Space Site";
+
+    }
+
+
+}
+
+@keyframes text-typing {
+    100% {
+
+        width: 430px;
+
+    }
 }
 
 @keyframes blink-caret {
@@ -288,10 +429,10 @@ moon
     0%,
     50%,
     75% {
-        border-color: transparent
+        border-color: transparent;
     }
 
     100% {
-        border-color: #fff
+        border-color: #fff;
     }
 }
