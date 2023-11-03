@@ -20,9 +20,11 @@
     border: 0;
     left: -1000000px;
 }
+
 nav {
-    background: linear-gradient(to bottom , #F1C50F , #ca49b3);
+    background: linear-gradient(to bottom, #F1C50F, #ca49b3);
 }
+
 .container {
     margin: 0 auto;
     max-width: 1400px;
@@ -56,28 +58,31 @@ nav .container .nav-content .mail {
 
 }
 
-nav .container .nav-content .mail input{
-        padding: 10px 68px 10px 10px;
-        font-size: 16px;   
-}
-nav .container .nav-content .mail input::placeholder{
-        font-size: 16px;
-        color: #c2c2c2;
-}
-nav .container .nav-content .mail a {
-        padding: 12px 40px;
-        background-color: #F1C50F;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        transition: background-color 200ms ease-in;
-}
-nav .container .nav-content .mail a:hover {
-        background-color: #d9b10e;
+nav .container .nav-content .mail input {
+    padding: 10px 68px 10px 10px;
+    font-size: 16px;
 }
 
-.team-text-container{
+nav .container .nav-content .mail input::placeholder {
+    font-size: 16px;
+    color: #c2c2c2;
+}
+
+nav .container .nav-content .mail a {
+    padding: 12px 40px;
+    background-color: #F1C50F;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 200ms ease-in;
+}
+
+nav .container .nav-content .mail a:hover {
+    background-color: #d9b10e;
+}
+
+.team-text-container {
 
     text-align: center;
     display: flex;
@@ -93,6 +98,7 @@ nav .container .nav-content .mail a:hover {
     font-family: 'Agbalumo', sans-serif;
     font-weight: 600;
 }
+
 .team-text-container p {
     max-width: 800px;
     color: #5b5b61;
@@ -118,54 +124,62 @@ nav .container .nav-content .mail a:hover {
     max-width: 550px;
     transition: all 200ms linear;
 }
+
 .team-cards .team-card:hover {
     transform: translateY(-5px);
     background-color: #d9b10e;
 }
-.team-cards .team-card .img-container{
+
+.team-cards .team-card .img-container {
     width: 300px;
+    height: auto;
     overflow: hidden;
 }
-.team-cards .team-card .img-container img{
+
+.team-cards .team-card .img-container img {
     width: 100%;
     height: auto;
     border-radius: 50%;
     aspect-ratio: 1;
 }
 
-.team-cards .team-card .details-container{
+.team-cards .team-card .details-container {
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
 }
-.team-cards .team-card .details-container h3{
+
+.team-cards .team-card .details-container h3 {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 500;
     color: #5b5b61;
 
-} 
-.team-cards .team-card .details-container h4{
+}
+
+.team-cards .team-card .details-container h4 {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 800;
 
-} 
-.team-cards .team-card .details-container p{
+}
+
+.team-cards .team-card .details-container p {
     max-width: 530px;
     color: #5b5b61;
     line-height: 1.4;
 
-} 
+}
 
-.team-cards .team-card .details-container .social-links{
+.team-cards .team-card .details-container .social-links {
     display: flex;
     gap: 24px;
     align-items: flex-start;
 }
-.team-cards .team-card .details-container .social-links a{
+
+.team-cards .team-card .details-container .social-links a {
     font-size: 25px;
     color: #fff;
     background-color: #ca49b3;
@@ -177,29 +191,30 @@ nav .container .nav-content .mail a:hover {
     height: 35px;
     transition: all 200ms linear;
 }
-.team-cards .team-card .details-container .social-links a:hover{
+
+.team-cards .team-card .details-container .social-links a:hover {
     background-color: #fff;
     color: #ca49b3;
 }
 
 
 .container .contact-us {
-        display: flex;
-        margin-bottom: 30px;
-        justify-content: space-evenly;
-        
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+
 }
 
-.container .contact-us .contact-details{
+.container .contact-us .contact-details {
 
     display: flex;
     flex-direction: column;
     gap: 68px;
     padding: 100px 68px;
     justify-content: center;
-    background: linear-gradient(to top , #F1C50F , #ca49b3);
+    background: linear-gradient(to top, #F1C50F, #ca49b3);
     color: #fff;
-    
+
 
 }
 
@@ -207,56 +222,67 @@ nav .container .nav-content .mail a:hover {
     display: flex;
     gap: 15px;
 }
+
 .container .contact-us .contact-details .detail {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.container .contact-us .contact-details .detail p{
+
+.container .contact-us .contact-details .detail p {
     max-width: 390px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    padding: 16px 0 68px 0;
     justify-content: center;
     gap: 24px;
 }
-form h2{
+
+form h2 {
     text-align: center;
 }
-form .contact-inputs{
+
+form .contact-inputs {
     display: flex;
     flex-direction: column;
     gap: 45px;
 }
 
 
-form .contact-inputs input , textarea{
+form .contact-inputs input,
+textarea {
     min-width: 400px;
     max-width: 400px;
     border-bottom: 2px solid #000;
     padding: 0 0 8px 8px;
     resize: none;
 }
-form .contact-inputs input::placeholder , textarea::placeholder{
+
+form .contact-inputs input::placeholder,
+textarea::placeholder {
     color: #5b5b61a5;
     font-weight: 400;
     font-size: 16px;
-} 
-form  button{
+}
+
+form button {
     background-color: #ca49b3;
     color: #fff;
     padding: 12px;
     font-size: 16px;
     font-weight: 700;
-
-    
+    transition: all 200ms linear;
 }
-form textarea{
+
+form button:hover {
+    background-color: #973585;
+}
+
+form textarea {
     max-width: 400px;
-    max-height:100px ;
+    max-height: 100px;
 }
 
 #icon {
@@ -264,8 +290,122 @@ form textarea{
 }
 
 
+/* @media all and (max-width: 991px) {
+    .container .contact-us .contact-details {
+        gap: 50px;
+        padding: 90px 50px;
+        margin: 0 24px;
+    }
+
+    form .contact-inputs {
+        gap: 36px;
+    }
+
+    .form-info {
+        padding-right: 24px;
+    }
+
+    form .contact-inputs input,
+    textarea {
+        min-width: 350px;
+    }
+}
 
 
+@media all and (max-width: 990px) {
+    .container .contact-us {
+        flex-direction: column;
+        margin: 0 0 24px 0;
+    }
+    .container .contact-us .contact-details {
+        gap: 50px;
+        padding: 90px 50px;
+    }
 
+    .form-info {
+        padding: 24px 24px 0 24px;
+    }
+
+    form .contact-inputs {
+        gap: 36px;
+    }
+
+    form .contact-inputs input {
+        max-width: 100%;
+        padding-left: 10px;
+    }
+    form textarea{
+        max-width: 100%;
+        padding-left: 10px;
+    }
+    .team-card {
+        flex-direction: column;
+
+    }
+}
+
+@media all and (max-width: 576px){
+    .team-card {
+        padding: 24px;
+    }
+
+    .team-text-container p {
+        max-width: 100%;
+        color: #5b5b61;
+        font-size: 14px;
+    }
+
+
+    .team-cards {
+        flex: 1 1 250px;
+    }
+
+    .container .contact-us {
+        margin:0;
+    }
+    .container .contact-us .contact-details {
+        padding: 70px 33px;
+        width: 100%;
+        margin: 0 0 24px 0;
+    }
+
+    form .contact-inputs input , textarea {
+        min-width: 100%;
+    }
+
+    .form-info {
+        padding: 0;
+    }
+}
+@media all and (max-width: 548px){
+    .nav-content .mail{
+        flex-direction: column;
+    }
+
+    .team-cards .team-card {
+        max-width: 350px;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    nav .container .nav-content .mail {
+        flex-direction: column;
+    }
+    .team-cards .team-card {
+        max-width: 300px;
+    }
+    .team-cards .team-card .img-container img {
+        width: 75%;
+    
+    }
+    #main-section-text {
+        font-size: 44px;
+    }
+
+    nav .container .nav-content h1 {
+        font-size: 48px;
+    }
+} */
 
 
