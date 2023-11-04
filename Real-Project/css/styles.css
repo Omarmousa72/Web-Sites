@@ -7,6 +7,10 @@
     border: 0;
 }
 
+.img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 .u-visuallyhidden {
@@ -21,8 +25,14 @@
     left: -1000000px;
 }
 
-nav {
+body {
+    font-family: sans-serif;
+}
+
+header {
     background: linear-gradient(to bottom, #F1C50F, #ca49b3);
+    padding: 64px 24px;
+
 }
 
 .container {
@@ -30,98 +40,96 @@ nav {
     max-width: 1400px;
 }
 
-nav .container .nav-content {
+header .container #header-content {
 
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 88px 68px;
-    margin-bottom: 30px;
-    gap: 30px;
+    gap: 16px;
 
 }
 
-nav .container .nav-content h1 {
+header .container #header-content h1 {
     color: #fff;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     font-family: 'Agbalumo', sans-serif;
-    max-width: 800px;
-    line-height: 1.1;
-    word-spacing: 7px;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 
-nav .container .nav-content .mail {
+header .container #header-content div {
     display: flex;
+    align-items: stretch;
 
 }
 
-nav .container .nav-content .mail input {
-    padding: 10px 68px 10px 10px;
-    font-size: 16px;
+header .container #header-content input {
+    padding: 8px;
+    text-transform: uppercase;
 }
 
-nav .container .nav-content .mail input::placeholder {
-    font-size: 16px;
-    color: #c2c2c2;
+#header-content input::placeholder {
+    font-size: 13px;
 }
 
-nav .container .nav-content .mail a {
-    padding: 12px 40px;
-    background-color: #F1C50F;
+header .container #header-content button {
+    cursor: pointer;
+    background-color: #f0c30f;
+    text-transform: uppercase;
+    padding: 0 18px;
+    font-weight: 600;
     color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
     transition: background-color 200ms ease-in;
 }
 
-nav .container .nav-content .mail a:hover {
+header .container #header-content button:hover {
     background-color: #d9b10e;
 }
 
-.team-text-container {
+#team {
+    padding: 48px 24px;
+}
 
+#team #head-line {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 36px;
 }
 
 #main-section-text {
-    font-size: 48px;
+    font-size: 38px;
     font-family: 'Agbalumo', sans-serif;
     font-weight: 600;
+    text-transform: capitalize;
+
 }
 
-.team-text-container p {
-    max-width: 800px;
-    color: #5b5b61;
+#head-line p {
+    margin: 16px auto;
+    max-width: 60%;
+    color: #28282a;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 
 .team-cards {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 24px;
+    margin-top: 36px;
+
 }
 
 .team-cards .team-card {
-    display: flex;
-    gap: 20px;
-    padding: 24px 28px;
-    background-color: #F1C50F;
+    max-width: 500px;
+    background-color: #f0c30f;
     border-radius: 50px;
-    max-width: 550px;
+    padding: 24px;
+    gap: 16px;
+    display: flex;
+    align-content: flex-start;
     transition: all 200ms linear;
 }
 
@@ -130,56 +138,39 @@ nav .container .nav-content .mail a:hover {
     background-color: #d9b10e;
 }
 
-.team-cards .team-card .img-container {
-    width: 300px;
-    height: auto;
-    overflow: hidden;
-}
 
-.team-cards .team-card .img-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+.team-cards .team-card img {
+    width: 150px;
+    height: 150px;
     aspect-ratio: 1;
+    border-radius: 50%;
 }
 
-.team-cards .team-card .details-container {
-
+.team-cards .team-card .card-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.team-cards .team-card .card-content h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 300;
 
 }
 
-.team-cards .team-card .details-container h3 {
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: 500;
-    color: #5b5b61;
-
+.team-cards .team-card .card-content h4 {
+    font-size: 24px;
 }
 
-.team-cards .team-card .details-container h4 {
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: 800;
-
-}
-
-.team-cards .team-card .details-container p {
-    max-width: 530px;
-    color: #5b5b61;
-    line-height: 1.4;
-
-}
-
-.team-cards .team-card .details-container .social-links {
+.team-cards .team-card .card-content .card-links {
     display: flex;
     gap: 24px;
     align-items: flex-start;
 }
 
-.team-cards .team-card .details-container .social-links a {
+.team-cards .team-card .card-content .card-links a {
     font-size: 25px;
     color: #fff;
     background-color: #ca49b3;
@@ -192,220 +183,94 @@ nav .container .nav-content .mail a:hover {
     transition: all 200ms linear;
 }
 
-.team-cards .team-card .details-container .social-links a:hover {
+.team-cards .team-card .card-content .card-links a:hover {
     background-color: #fff;
     color: #ca49b3;
 }
 
+#contact {
+    padding: 48px 24px;
+}
 
-.container .contact-us {
+#contact-content {
     display: flex;
-    margin-bottom: 30px;
-    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
 
 }
 
-.container .contact-us .contact-details {
+#contact-info {
 
     display: flex;
     flex-direction: column;
-    gap: 68px;
-    padding: 100px 68px;
     justify-content: center;
+    gap: 48px;
+    padding: 64px;
     background: linear-gradient(to top, #F1C50F, #ca49b3);
+
+}
+
+#contact-info,
+#contact-form {
+    max-width: 50%;
+    flex-grow: 1;
+    min-width: 320px;
+}
+
+#contact-info .details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     color: #fff;
-
-
 }
 
-.container .contact-us .contact-details .detail .section-detail {
+#contact-info .details h3 {
     display: flex;
-    gap: 15px;
-}
-
-.container .contact-us .contact-details .detail {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.container .contact-us .contact-details .detail p {
-    max-width: 390px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-}
-
-form h2 {
-    text-align: center;
-}
-
-form .contact-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-}
-
-
-form .contact-inputs input,
-textarea {
-    min-width: 400px;
-    max-width: 400px;
-    border-bottom: 2px solid #000;
-    padding: 0 0 8px 8px;
-    resize: none;
-}
-
-form .contact-inputs input::placeholder,
-textarea::placeholder {
-    color: #5b5b61a5;
-    font-weight: 400;
-    font-size: 16px;
-}
-
-form button {
-    background-color: #ca49b3;
-    color: #fff;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    transition: all 200ms linear;
-}
-
-form button:hover {
-    background-color: #973585;
-}
-
-form textarea {
-    max-width: 400px;
-    max-height: 100px;
-}
-
-#icon {
+    align-items: center;
+    gap: 12px;
     font-size: 24px;
 }
 
-
-/* @media all and (max-width: 991px) {
-    .container .contact-us .contact-details {
-        gap: 50px;
-        padding: 90px 50px;
-        margin: 0 24px;
-    }
-
-    form .contact-inputs {
-        gap: 36px;
-    }
-
-    .form-info {
-        padding-right: 24px;
-    }
-
-    form .contact-inputs input,
-    textarea {
-        min-width: 350px;
-    }
+#contact-form {
+    padding: 64px;
+    text-align: center;
 }
 
-
-@media all and (max-width: 990px) {
-    .container .contact-us {
-        flex-direction: column;
-        margin: 0 0 24px 0;
-    }
-    .container .contact-us .contact-details {
-        gap: 50px;
-        padding: 90px 50px;
-    }
-
-    .form-info {
-        padding: 24px 24px 0 24px;
-    }
-
-    form .contact-inputs {
-        gap: 36px;
-    }
-
-    form .contact-inputs input {
-        max-width: 100%;
-        padding-left: 10px;
-    }
-    form textarea{
-        max-width: 100%;
-        padding-left: 10px;
-    }
-    .team-card {
-        flex-direction: column;
-
-    }
+#contact-form h2 {
+    font-size: 36px;
+    margin-bottom: 48px;
 }
 
-@media all and (max-width: 576px){
-    .team-card {
-        padding: 24px;
-    }
-
-    .team-text-container p {
-        max-width: 100%;
-        color: #5b5b61;
-        font-size: 14px;
-    }
-
-
-    .team-cards {
-        flex: 1 1 250px;
-    }
-
-    .container .contact-us {
-        margin:0;
-    }
-    .container .contact-us .contact-details {
-        padding: 70px 33px;
-        width: 100%;
-        margin: 0 0 24px 0;
-    }
-
-    form .contact-inputs input , textarea {
-        min-width: 100%;
-    }
-
-    .form-info {
-        padding: 0;
-    }
-}
-@media all and (max-width: 548px){
-    .nav-content .mail{
-        flex-direction: column;
-    }
-
-    .team-cards .team-card {
-        max-width: 350px;
-    }
-
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
 }
 
-@media all and (max-width: 500px) {
-    nav .container .nav-content .mail {
-        flex-direction: column;
-    }
-    .team-cards .team-card {
-        max-width: 300px;
-    }
-    .team-cards .team-card .img-container img {
-        width: 75%;
-    
-    }
-    #main-section-text {
-        font-size: 44px;
-    }
+#contact-form form>* {
+    display: inline-block;
+    border-bottom: 2px solid #000;
+    padding: 12px;
+    font-family: inherit;
+}
 
-    nav .container .nav-content h1 {
-        font-size: 48px;
-    }
-} */
+#contact-form form>*::placeholder {
+    font-size: 15px;
+    text-transform: capitalize;
+}
 
+#contact-form form>*:last-child {
+    border: 0;
+    background-color: #ca49b3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
 
+#contact-form form>*:last-child:hover {
+    background-color: #ba36a2;
+}
