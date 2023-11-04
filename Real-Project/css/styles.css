@@ -67,11 +67,12 @@ header .container #header-content div {
 
 header .container #header-content input {
     padding: 8px;
-    text-transform: uppercase;
+    
 }
 
 #header-content input::placeholder {
-    font-size: 13px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 
 header .container #header-content button {
