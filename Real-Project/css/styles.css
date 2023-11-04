@@ -61,8 +61,6 @@ header .container #header-content h1 {
 
 header .container #header-content div {
     display: flex;
-    align-items: stretch;
-
 }
 
 header .container #header-content input {
