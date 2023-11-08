@@ -339,8 +339,8 @@ footer p {
     }
 
     #story-content {
-        background: linear-gradient(to right, #eff8ff27, #eff8ff27),
-            url("../photos/2.jpg") no-repeat center/cover;
+        background: linear-gradient(to right, #eff8ff3a, #eff8ff3a),
+            url("../photos/2.jpg") no-repeat top/cover;
     }
 
     #story-content img {
