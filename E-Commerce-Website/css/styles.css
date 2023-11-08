@@ -338,6 +338,13 @@ footer p {
         max-width: 100%;
     }
 
+
+    footer p .foot {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 600px) {
     #story-content {
         background: linear-gradient(to right, #eff8ff3a, #eff8ff3a),
             url("../photos/2.jpg") no-repeat top/cover;
@@ -350,9 +357,5 @@ footer p {
     #story-content .story-details p {
         font-size: 17px;
         color: #66696d;
-    }
-
-    footer p .foot {
-        font-size: 13.5px;
     }
 }
