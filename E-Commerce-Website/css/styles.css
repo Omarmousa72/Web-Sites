@@ -343,6 +343,9 @@ footer p {
     #story-content img {
         display: none;
     }
+    #header-content button {
+        padding: 16px;
+    }
 }
 
 @media (max-width: 371px){
