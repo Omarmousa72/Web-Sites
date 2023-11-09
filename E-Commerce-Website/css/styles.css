@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 1920px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -62,6 +62,7 @@ span {
     color: #fff;
     padding: 36px 64px;
     background-image: url(../photos/1.jpg);
+
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 560px;
@@ -78,7 +79,7 @@ span {
     font-size: 28px;
     font-weight: 300;
     line-height: 1.4;
-    max-width: 55%;
+    max-width: 100%;
 
 }
 
@@ -107,21 +108,31 @@ span {
     display: flex;
     margin: 84px 0;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background-color: #eff8ff;
 }
 
-#story-content img {
-    max-width: 50%;
+#story-content .img-container{
+    display: flex;
+    
+}
+#story-content .img-container img {
+    max-width: 100%;
     height: auto;
-    object-fit: contain;
+    
+}
+
+#story-content .img-container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #story-content .story-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 64px;
+    padding: 70px 25px;
     gap: 36px;
     max-width: 50%;
 }
@@ -237,31 +248,6 @@ footer p {
 
 
 @media (max-width: 768px) {
-    #nav-content ul {
-        gap: 10px;
-    }
-
-    #nav-content ul li>* {
-        padding: 5px;
-    }
-
-    #header-content button {
-        margin: 34px 0 24px 0;
-    }
-
-    #header-content p {
-        font-size: 25px;
-        max-width: 83%;
-    }
-
-    #header-content {
-        background-position: center;
-    }
-
-    #story-content .story-details p {
-        font-size: 17px;
-    }
-
     #more-details {
         font-size: 13px;
     }
@@ -299,6 +285,14 @@ footer p {
 }
 
 @media (max-width: 767px) {
+    #nav-content ul {
+        gap: 10px;
+    }
+
+    #nav-content ul li>* {
+        padding: 5px;
+    }
+
     .container #nav-content {
         padding: 30px 64px;
         flex-direction: column;
@@ -313,21 +307,7 @@ footer p {
         font-size: 16px;
     }
 
-    #header-content h1 {
-        font-size: 41px;
-    }
 
-    #header-content p {
-        font-size: 18px;
-        max-width: 100%;
-    }
-
-    #header-content button {
-        font-size: 16px;
-        max-width: 180px;
-        padding: 16px 16px;
-
-    }
 
     #story-content .story-details {
         display: flex;
@@ -345,17 +325,33 @@ footer p {
 }
 
 @media (max-width: 610px) {
+
+    
+    #header-content h1 {
+        font-size: 53px;
+    }
+
+    #header-content p {
+        margin-top: 18px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.4;
+        max-width: 100%;
+    }
+
     #story-content {
-        background: linear-gradient(to right, #eff8ff3a, #eff8ff3a),
+        background: linear-gradient(to right, #eff8ff47, #eff8ff47),
             url("../photos/2.jpg") no-repeat top/cover;
     }
 
     #story-content img {
         display: none;
     }
+}
 
-    #story-content .story-details p {
-        font-size: 17px;
-        color: #66696d;
+@media (max-width: 371px){
+    #header-content{
+        padding: 36px;
+        min-height: 430px;
     }
 }
