@@ -310,10 +310,6 @@ footer p {
 
 
     #story-content .story-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 70px 25px;
         gap: 26px;
         max-width: 100%;
     }
