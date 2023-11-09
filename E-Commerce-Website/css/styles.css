@@ -344,7 +344,7 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 610px) {
     #story-content {
         background: linear-gradient(to right, #eff8ff3a, #eff8ff3a),
             url("../photos/2.jpg") no-repeat top/cover;
