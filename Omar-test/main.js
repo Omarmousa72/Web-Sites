@@ -16,6 +16,8 @@ const calc = () => {
         heightInM = heightInCm / 100,
         weight = parseFloat(document.getElementById("weight").value),
         bmi = weight / (heightInM * heightInM);
+        document.getElementById("height").value = "";
+        document.getElementById("weight").value = "";
     if ((isNaN(heightInCm) || isNaN(weight))) {
         alert("Enter weight and height!");
         return;
