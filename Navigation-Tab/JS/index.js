@@ -47,8 +47,6 @@ let SearchIco = document.getElementById("search-icon"),
 const clicked = () => {
     if (isOpened) {
         SearchBtn.style.width = "50px";
-        SearchBtn.style.borderRadius = "50%";
-        SearchBtn.style.transition = "width 400ms ease";
         SearchFormInput.value = "";
         SearchForm.classList.remove('active');
     } else {
