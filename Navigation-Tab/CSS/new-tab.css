@@ -35,11 +35,19 @@
 }
 
 .search-btn-container .btn .search-icon {
+    display: none;
     color: #fff;
     font-size: 36px;
     cursor: pointer;
-
 }
+
+.toggle {
+    color: #Fff;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+
 
 form {
     display: none;
