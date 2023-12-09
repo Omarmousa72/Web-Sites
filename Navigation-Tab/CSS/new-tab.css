@@ -8,12 +8,179 @@
     box-sizing: border-box;
 }
 
-
+section {
+    display: flex;
+    justify-content: center;
+    background: url("../Images/Edge\ of\ Earth\ 4K\ wallpaper.jpg");
+    background-size: cover;
+    height: 100vh;
+}
 
 .container {
     max-width: 1400px;
+    /* padding: 0 24px; */
+    /*Padding left and right*/
+    height: auto;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    background: #050e1a;
+    border-bottom: 5px solid #0b2345;
+    box-shadow: 0 0 10px #0b2345,
+        0 0 15px #0e305e,
+        0 0 20px 5px #1b519b;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+.nav-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 0 24px;
+    margin-top: 48px;
+}
+
+.nav-cards .card {
+    width: 100%;
+    height: 254px;
+    padding: 16px;
+    /* background: #07182E; */
+    background: #0b2345;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow: hidden;
+    border-radius: 20px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.nav-cards .card:hover {
+    animation-play-state: paused;
+}
+
+.nav-cards .card h1 {
+    color: #Fff;
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    place-self: start;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    background-image: linear-gradient(180deg, rgb(254, 48, 0), rgb(61, 5, 5));
+    height: 70%;
+    place-self: center;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    background: #050e1a;
+    place-self: center;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.nav-cards .card .acc-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    z-index: 1;
+}
+
+.nav-cards .card img {
+    width: 100%;
     height: auto;
 }
+
+.nav-cards .card ul {
+    position: absolute;
+    display: flex;
+    gap: 16px;
+    top: 15px;
+    left: 95px;
+    border: 5px solid #0b2345;
+    border-radius: 50px;
+    display: none;
+    z-index: 1;
+}
+
+.nav-cards .card ul li {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    z-index: 1;
+}
+
+.acc-btn:hover,
+li:hover {
+    border: 3px solid #1b519b;
+}
+
+
+
 
 .search-btn-container {
     position: fixed;
@@ -23,28 +190,26 @@
 
 .search-btn-container .btn {
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     gap: 16px;
     width: 50px;
     height: 50px;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
     border-radius: 50%;
-    transition: width 400ms ease;
+    transition: width 400ms ease-in-out;
+}
+
+.search-btn-container .btn:hover {
+    background-color: #1f1f1f;
 }
 
 .search-btn-container .btn .search-icon {
-    display: none;
     color: #fff;
     font-size: 36px;
     cursor: pointer;
-}
-
-.toggle {
-    color: #Fff;
-    font-size: 36px;
-    cursor: pointer;
+    padding: 7px;
 }
 
 
@@ -52,22 +217,22 @@
 form {
     display: none;
     overflow: hidden;
-    transform: height 400ms ease;
 }
 
 form.active {
     display: block;
+    transition: display 400ms ease;
 }
 
 
 form input[type="search"] {
     border: 0;
     outline: 0;
+    color: #Fff;
+    font-size: 16px;
+    font-family: sans-serif;
     background-color: rgb(68, 66, 66);
     padding: 8px 10px;
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #Fff;
     border-radius: 50px;
     transition: width 400ms ease;
 }

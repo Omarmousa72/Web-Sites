@@ -7,12 +7,15 @@ let youtube = document.getElementById("youtube"),
     twitch = document.getElementById("twitch"),
     gpt = document.getElementById("gpt"),
     //<==========================================>
-    toggle = document.getElementById("toggle"),
+    accBtn = document.getElementById("acc-btn"),
+    accList = document.getElementById("acc-list"),
+    //<==========================================>
     SearchIco = document.getElementById("search-icon"),
     SearchBtn = document.getElementById("btn"),
     SearchForm = document.getElementById("search-form"),
     SearchFormInput = document.getElementById("SearchFormInput"),
-    isOpened = false;
+    searchIsOpened = false,
+    accBtnIsOpened = false;
 
 
 // Add a click event listener to the div
@@ -46,33 +49,54 @@ let youtube = document.getElementById("youtube"),
 //     window.location.href = "https://chat.openai.com/"; // Replace with your desired URL
 // });
 
-const clicked = () => {
-    if (isOpened) {
-        SearchBtn.style.width = "50px";
 
-        SearchIco.style.display = "none";
-        SearchForm.classList.remove('active');
+
+
+//----------Search-box----------//
+const btnClicked = () => {
+    if (searchIsOpened) {
+        SearchBtn.style.width = "50px";
+        SearchFormInput.value = "";
+        setTimeout(() => {
+            SearchForm.classList.remove("active");
+        }, 200);
     } else {
-        SearchBtn.style.width = "420px";
+        SearchBtn.style.width = "390px";
         SearchBtn.style.borderRadius = "50px";
         SearchBtn.style.transition = "width 400ms ease";
-        SearchIco.style.display = "block";
         SearchForm.classList.add("active");
     }
-    isOpened = !isOpened;
+
+    searchIsOpened = !searchIsOpened;
+
 }
-
-const search = () => {
-    var searchQuery = document.getElementById('SearchFormInput').value;
-    if (searchQuery === "") {
-
+const accBtnClicked = () => {
+    if (accBtnIsOpened) {
+        accList.style.display = "none";
     } else {
-        SearchForm.action = "https://www.google.com/search?q=" + encodeURIComponent(searchQuery);
-        SearchForm.submit();
-        SearchFormInput.value = "";
+        accList.style.display = "flex";
     }
+
+    accBtnIsOpened = !accBtnIsOpened;
 }
-toggle.onclick = clicked;
-SearchIco.onclick = search;
+
+// const search = () => {
+//     var searchQuery = document.getElementById('SearchFormInput').value;
+//     if (searchQuery === "") {
+
+//     } else {
+//         SearchForm.action = "https://www.google.com/search?q=" + encodeURIComponent(searchQuery);
+//         SearchForm.submit();
+//         SearchFormInput.value = "";
+//     }
+// }
+
+
+accBtn.onclick = accBtnClicked;
+SearchIco.onclick = btnClicked;
+
+
+
+
 
 
