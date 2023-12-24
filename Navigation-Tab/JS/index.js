@@ -14,6 +14,7 @@ let youtube = document.getElementById("youtube"),
     SearchBtn = document.getElementById("btn"),
     SearchForm = document.getElementById("search-form"),
     SearchFormInput = document.getElementById("SearchFormInput"),
+    cursor = document.querySelector(".cursor"),
     searchIsOpened = false,
     accBtnIsOpened = false;
 
@@ -50,6 +51,21 @@ let youtube = document.getElementById("youtube"),
 // });
 
 
+// const search = () => {
+//     var searchQuery = document.getElementById('SearchFormInput').value;
+//     if (searchQuery === "") {
+
+//     } else {
+//         SearchForm.action = "https://www.google.com/search?q=" + encodeURIComponent(searchQuery);
+//         SearchForm.submit();
+//         SearchFormInput.value = "";
+//     }
+// }
+//----------Custom-Cursor----------//
+// document.addEventListener("mousemove", e => {
+//     cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
+// })
+
 
 
 //----------Search-box----------//
@@ -70,6 +86,7 @@ const btnClicked = () => {
     searchIsOpened = !searchIsOpened;
 
 }
+//----------account-selector----------//    
 const accBtnClicked = () => {
     if (accBtnIsOpened) {
         accList.style.display = "none";
@@ -79,18 +96,6 @@ const accBtnClicked = () => {
 
     accBtnIsOpened = !accBtnIsOpened;
 }
-
-// const search = () => {
-//     var searchQuery = document.getElementById('SearchFormInput').value;
-//     if (searchQuery === "") {
-
-//     } else {
-//         SearchForm.action = "https://www.google.com/search?q=" + encodeURIComponent(searchQuery);
-//         SearchForm.submit();
-//         SearchFormInput.value = "";
-//     }
-// }
-
 
 accBtn.onclick = accBtnClicked;
 SearchIco.onclick = btnClicked;

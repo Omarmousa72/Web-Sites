@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your YouTube Account Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="accountSwitcher">
+        <div id="currentAccount" onclick="showAccountList()">
+            <!-- Display the current account's profile picture here -->
+        </div>
+        <ul id="accountList" style="display: none;" onclick="switchAccount(event)">
+            <!-- List of other accounts -->
+            <!-- Example: <li data-account="username">Account Name</li> -->
+        </ul>
+    </div>
+
+    <div id="videoContainer">
+        <!-- The iframe will be inserted here dynamically using JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

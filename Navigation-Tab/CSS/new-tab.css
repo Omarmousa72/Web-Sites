@@ -8,6 +8,9 @@
     box-sizing: border-box;
 }
 
+
+
+
 /*Custom scroll-bar*/
 ::-webkit-scrollbar {
     width: 15px;
@@ -95,16 +98,17 @@ header {
     animation-play-state: paused;
 }
 
-.nav-cards .card h1 {
-    color: #Fff;
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    place-self: start;
-    left: 0;
-    bottom: 0;
+.nav-cards .card .yout {
+    color: #e00;
+    grid-column-start: 8;
+    grid-column-end: 10;
+    width: 70px;
+    height: 70px;
+    place-self: end;
+    margin-right: 20px;
     z-index: 1;
 }
+
 
 
 .card::before {
@@ -167,8 +171,11 @@ header {
 }
 
 .nav-cards .card ul {
-    position: absolute;
+    max-width: 230px;
     display: flex;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
     gap: 16px;
     top: 15px;
     left: 95px;
