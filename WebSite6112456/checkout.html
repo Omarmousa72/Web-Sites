@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="./checkout.css">
+    <title>checkout</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>checkout</h1>
+    </header>
+    <section class="checkout-section">
+        <form action="">
+            <div class="billing-details-input-elements">
+                <h2>billings details</h2>
+                <div class="input-item">
+                    <label for="firstname">first name</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                </div>
+                <div class="input-item">
+                    <label for="lastname">last name</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                </div>
+                <div class="input-item">
+                    <label for="country">country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+                <div class="input-item">
+                    <label for="address">address</label>
+                    <input type="text" name="address" id="address" placeholder="Address">
+                </div>
+                <div class="input-item">
+                    <label for="phone">phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone">
+                </div>
+                <div class="input-item">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-item">
+                    <label for="ordernotes">order notes</label>
+                    <textarea name="ordernotes" id="ordernotes" cols="30" rows="10"
+                        placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                </div>
+            </div>
+            <div class="your-order-details">
+                <div class="your-order-details-header">
+                    <h2>your order</h2>
+                    <table class="table-1">
+                        <tr>
+                            <td>
+                                <p id="bold-item">subtotal</p>
+                            </td>
+                            <td>
+                                <p class="right-price">$281.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p id="bold-item">total</p>
+                            </td>
+                            <td>
+                                <p class="right-price" id="bold-item">$281.00</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="your-order-checks">
+                    <div>
+                        <input type="radio" name="your-order-radio">
+                        <label for="your-order-radio">Direct bank transfer</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="your-order-radio">
+                        <label for="your-order-radio">Check payment</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="your-order-radio">
+                        <label for="your-order-radio">Cash on delivery</label>
+                    </div>
+                </div>
+                <div class="btn-con">
+                    <button type="submit" class="btn">place order</button>
+                </div>
+                <table class="table-2">
+                    <tr>
+                        <td>item</td>
+                        <td>amount</td>
+                        <td>price</td>
+                    </tr>
+                    <tr>
+                        <td>arduino uno r3</td>
+                        <td>2</td>
+                        <td>50.00$</td>
+                    </tr>
+                    <tr>
+                        <td>ultrasonic</td>
+                        <td>4</td>
+                        <td>20.00$</td>
+                    </tr>
+                    <tr>
+                        <td>pir sensor</td>
+                        <td>1</td>
+                        <td>5.00$</td>
+                    </tr>
+                    <tr>
+                        <td>raspery pi 4</td>
+                        <td>2</td>
+                        <td>200.00$</td>
+                    </tr>
+                    <tr>
+                        <td>shield</td>
+                        <td>1</td>
+                        <td>6.00$</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>
